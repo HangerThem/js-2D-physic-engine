@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2D Physics Engine</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #000;
+        height: 100vh;
+        margin: 0;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      canvas {
+        border: 1px solid #222;
+      }
+      .controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        gap: 1rem;
+
+        div {
+          position: relative;
+        }
+      }
+      label {
+        color: #fff;
+        font-size: 0.9rem;
+        position: absolute;
+        top: -0.65rem;
+        left: 0.5rem;
+        background-color: #000;
+        padding: 0 0.25rem;
+      }
+      input {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+        border: none;
+        border-radius: 0.5rem;
+        border: 1px solid #222;
+        background-color: transparent;
+        color: #fff;
+        outline: none;
+
+        --webkit-appearance: none;
+        -moz-appearance: textfield;
+      }
+      button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+        border: none;
+        border-radius: 0.5rem;
+        background-color: #222;
+        color: #fff;
+        cursor: pointer;
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <div class="controls">
+      <div>
+        <label for="gravity">Gravity:</label>
+        <input type="number" id="gravity" step="0.1" />
+      </div>
+      <button id="spawn">Spawn Body</button>
+      <button id="clear">Clear Bodies</button>
+    </div>
+    <script src="physicsEngine.js"></script>
+  </body>
+</html>
